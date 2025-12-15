@@ -92,4 +92,144 @@
       padding: 60px 25px 25px 25px; /* extra top padding for logo */
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: transform 0.4s, box-shad
+      transition: transform 0.4s, box-shadow 0.4s;
+      font-weight: bold;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+    }
+
+    /* Project background images */
+    .project-ml { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), 
+                  url('https://thumbs.dreamstime.com/b/abstract-network-connection-glowing-orange-teal-nodes-linked-lines-digital-data-visualization-futuristic-technology-concept-383665049.jpg') center/cover no-repeat;
+    }
+    .project-invoice { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), 
+                  url('https://qbotica.com/wp-content/uploads/2024/10/Downloader-La-244895.webp') center/cover no-repeat;
+    }
+    .project-ecommerce { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), 
+                  url('https://media.istockphoto.com/id/1286825422/vector/futuristic-online-shopping-e-commerce-concept-with-glowing-smartphone-shopping-cart-credit.jpg?s=612x612&w=0&k=20&c=PSJSmwBuy8_fpXqkVcVmamNlDeFJhtSLzOx45O3HOso=') center/cover no-repeat;
+    }
+    .project-visa { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), 
+                  url('https://www.shutterstock.com/image-vector/visa-application-document-form-passport-600nw-2628059167.jpg') center/cover no-repeat;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #0a0e1a;
+      font-size: 0.9rem;
+      color: var(--text);
+      border-top: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    @media (max-width: 900px) { section { padding: 50px 8%; } }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      section { padding: 40px 5%; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Chifaa Chetti</h1>
+  <p>Computer Science Engineer | Artificial Intelligence Student</p>
+  <a href="#projects">View My Projects</a>
+</header>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a 4th-year Computer Science Engineering student specializing in Artificial Intelligence.
+    I am passionate about software development, AI systems, and data analysis.
+    I enjoy building practical projects that solve real-world problems and continuously improving my technical skills.
+  </p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg');">
+      Python
+    </div>
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg');">
+      Machine Learning
+    </div>
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg');">
+      SQL & mongoDB
+    </div>
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');">
+      Git & GitHub
+    </div>
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');">
+      HTML
+    </div>
+    <div class="skill-card" style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');">
+      Basic React
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card project-ml">
+      <h3><i class="fa-solid fa-robot" style="color:#38bdf8; margin-right:8px;"></i>Machine Learning Models</h3>
+      <p>Implemented ML paradigms (Supervised, Unsupervised, Reinforcement Learning), focusing on training, evaluation, and result analysis.</p>
+      <a href="https://github.com/aounallahsara/ML_models" target="_blank">GitHub →</a>
+    </div>
+    <div class="card project-invoice">
+      <h3><i class="fa-solid fa-file-invoice" style="color:#38bdf8; margin-right:8px;"></i>Invoice Automation Tool</h3>
+      <p>Automated multiple PDF invoices extraction, price updates, and Excel export in one workflow.</p>
+      <a href="https://github.com/chifaa-VscCnt/Invoice-price-automation" target="_blank">GitHub →</a>
+    </div>
+    <div class="card project-ecommerce">
+      <h3><i class="fa-solid fa-cart-shopping" style="color:#38bdf8; margin-right:8px;"></i>E-commerce AI Description Generator</h3>
+      <p>Built a Python tool to automatically generate product descriptions for e-commerce websites.</p>
+      <a href="https://github.com/chifaa-VscCnt/Ecommerce-AI-Description-Generator-tool" target="_blank">GitHub →</a>
+    </div>
+    <div class="card project-visa">
+      <h3><i class="fa-solid fa-passport" style="color:#38bdf8; margin-right:8px;"></i>Saudi-Aisa Application Form</h3>
+      <p>Developed a Python application to fill Saudi visa application forms automatically.</p>
+      <a href="https://github.com/chifaa-VscCnt/Saudi-Aisa-Application-Form" target="_blank">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <p><strong>State Engineer Degree in Computer Science (AI)</strong><br>Djilali Liabes University — 2022 to Present</p>
+  <p><strong>Scientific Baccalaureate 2022</strong><br>Specialty: Experimental Sciences</p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <div class="card" style="max-width: 500px">
+    <p><i class="fa-solid fa-envelope" style="color:#38bdf8; margin-right:10px;"></i>chifaachifaa847@gmail.com</p>
+    <p><i class="fa-solid fa-phone" style="color:#38bdf8; margin-right:10px;"></i>+213 793 513 841</p>
+    <p><i class="fa-solid fa-location-dot" style="color:#38bdf8; margin-right:10px;"></i>Algeria</p>
+    <p><i class="fa-brands fa-github" style="color:#38bdf8; margin-right:10px;"></i><a href="https://github.com/chifaa-VscCnt" target="_blank">GitHub</a></p>
+    <p><i class="fa-brands fa-linkedin" style="color:#38bdf8; margin-right:10px;"></i><a href="https://linkedin.com/in/chetti-chifaa" target="_blank">LinkedIn</a></p>
+  </div>
+  <br>
+  <a href="CV-Chifaa-Chetti.pdf" download style="display:inline-block; padding:12px 25px; background:#38bdf8; color:#000; text-decoration:none; font-weight:bold; border-radius:25px;">
+     Download My CV
+  </a>
+</section>
+
+<footer>
+  © 2025 Chifaa Chetti — All Rights Reserved
+</footer>
+</body>
+</html>
