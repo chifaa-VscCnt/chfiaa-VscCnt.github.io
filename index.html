@@ -5,36 +5,38 @@
   <title>Chifaa Chetti | AI Engineering Student</title>
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
   <style>
     :root {
-      --primary: #0f172a;
-      --accent: #38bdf8;
-      --bg: #f8fafc;
-      --text: #334155;
+      --primary: #e2e8f0; /* Light text for dark mode */
+      --accent: #38bdf8;  /* Sky blue glow */
+      --bg: #0f172a;      /* Dark slate background */
+      --card-bg: #1e293b; /* Slightly lighter for cards */
+      --text: #cbd5e1;
     }
-
-    * { box-sizing: border-box; }
-
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
-
     header {
       background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      color: var(--primary);
       padding: 90px 20px;
       text-align: center;
     }
-
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.2rem; opacity: 0.9; }
-
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
     header a {
       display: inline-block;
       margin-top: 25px;
@@ -44,87 +46,79 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 30px;
-      transition: all 0.3s ease;
+      transition: box-shadow 0.3s;
     }
-
-    header a:hover { transform: translateY(-3px); background: #0ea5e9; }
-
-    section { padding: 70px 15%; }
-
+    header a:hover {
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+    }
+    section {
+      padding: 70px 15%;
+    }
     h2 {
       color: var(--primary);
       margin-bottom: 25px;
       border-left: 5px solid var(--accent);
       padding-left: 15px;
     }
-
     .skills, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-
-    /* Skill card with logo */
-    .skill-card {
-      background: white url('') no-repeat center top; /* placeholder, replace in-line */
-      background-size: 50px 50px;
-      padding: 60px 25px 25px 25px;
+    .card {
+      background: var(--card-bg);
+      padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+    }
+    .card h3 {
+      margin-top: 0;
       color: var(--primary);
     }
-    .skill-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-    /* Project card with image */
-    .project-card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
     }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-
-    .project-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-bottom: 1px solid #e2e8f0;
+    .card a:hover {
+      text-decoration: underline;
     }
-    .project-card .content {
-      padding: 20px;
-    }
-    .project-card h3 { margin-top: 0; color: var(--primary); }
-    .project-card a { color: var(--accent); text-decoration: none; font-weight: bold; }
-    .project-card a:hover { color: #0ea5e9; }
-
     footer {
       text-align: center;
       padding: 30px;
-      background: #e2e8f0;
+      background: #1e293b;
       font-size: 0.9rem;
+      color: var(--text);
     }
-
-    @media (max-width: 900px) { section { padding: 50px 8%; } }
+    @media (max-width: 900px) {
+      section {
+        padding: 50px 8%;
+      }
+    }
     @media (max-width: 600px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      section { padding: 40px 5%; }
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section {
+        padding: 40px 5%;
+      }
     }
   </style>
 </head>
-
 <body>
-
 <header>
   <h1>Chifaa Chetti</h1>
   <p>Computer Science Engineer | Artificial Intelligence Student</p>
   <a href="#projects">View My Projects</a>
 </header>
-
 <section>
   <h2>About Me</h2>
   <p>
@@ -133,85 +127,115 @@
     I enjoy building practical projects that solve real-world problems and continuously improving my technical skills.
   </p>
 </section>
-
 <section>
   <h2>Skills</h2>
   <div class="skills">
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg');">Python</div>
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg');">Machine Learning</div>
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg');">SQL & mongoDB</div>
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');">Git & GitHub</div>
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');">HTML</div>
-    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');">Basic React</div>
+    <div class="card">Python</div>
+    <div class="card">Machine Learning</div>
+    <div class="card">SQL & mongoDB</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">HTML</div>
+    <div class="card">Basic React</div>
   </div>
 </section>
-
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
-
-    <div class="project-card">
-      <img src="https://miro.medium.com/max/1200/1*1pFG8HfN8-YPv8bcJOSxxA.png" alt="ML Models">
-      <div class="content">
-        <h3>Machine Learning Models</h3>
-        <p>Implemented ML paradigms (Supervised, Unsupervised, Reinforcement Learning), focusing on training, evaluation, and result analysis.</p>
-        <a href="https://github.com/aounallahsara/ML_models" target="_blank">GitHub →</a>
-      </div>
+    <!-- Machine Learning Models -->
+    <div class="card">
+      <h3><i class="fa-solid fa-robot" style="color:#38bdf8; margin-right:8px;"></i>Machine Learning Models</h3>
+      <p>
+        Implemented ML paradigms (Supervised, Unsupervised, Reinforcement Learning),
+        focusing on training, evaluation, and result analysis.
+      </p>
+      <a href="https://github.com/aounallahsara/ML_models" target="_blank">
+        GitHub →
+      </a>
     </div>
-
-    <div class="project-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2083/2083827.png" alt="Invoice Tool">
-      <div class="content">
-        <h3>Invoice Automation Tool</h3>
-        <p>Automated multiple PDF invoices extraction, price updates, and Excel export in one workflow.</p>
-        <a href="https://github.com/chifaa-VscCnt/Invoice-price-automation" target="_blank">GitHub →</a>
-      </div>
+    <!-- Invoice Automation Tool -->
+    <div class="card">
+      <h3><i class="fa-solid fa-file-invoice" style="color:#38bdf8; margin-right:8px;"></i>Invoice Automation Tool</h3>
+      <p>
+        Automated multiple PDF invoices extraction, price updates, and Excel export in one workflow.
+      </p>
+      <a href="https://github.com/chifaa-VscCnt/Invoice-price-automation" target="_blank">
+        GitHub →
+      </a>
     </div>
-
-    <div class="project-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910760.png" alt="E-commerce AI">
-      <div class="content">
-        <h3>E-commerce AI Description Generator</h3>
-        <p>Built a Python tool to automatically generate product descriptions for e-commerce websites.</p>
-        <a href="https://github.com/chifaa-VscCnt/Ecommerce-AI-Description-Generator-tool" target="_blank">GitHub →</a>
-      </div>
+    <!-- E-commerce AI Description Generator -->
+    <div class="card">
+      <h3><i class="fa-solid fa-cart-shopping" style="color:#38bdf8; margin-right:8px;"></i>E-commerce AI Description Generator</h3>
+      <p>
+        Built a Python tool to automatically generate product descriptions for e-commerce websites.
+      </p>
+      <a href="https://github.com/chifaa-VscCnt/Ecommerce-AI-Description-Generator-tool" target="_blank">
+        GitHub →
+      </a>
     </div>
-
-    <div class="project-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3083/3083918.png" alt="Saudi-Aisa Form">
-      <div class="content">
-        <h3>Saudi-Aisa Application Form</h3>
-        <p>Developed a Python application to fill Saudi visa application forms automatically.</p>
-        <a href="https://github.com/chifaa-VscCnt/Saudi-Aisa-Application-Form" target="_blank">GitHub →</a>
-      </div>
+    <!-- Saudi-Aisa-Application-Form -->
+    <div class="card">
+      <h3><i class="fa-solid fa-passport" style="color:#38bdf8; margin-right:8px;"></i>Saudi-Aisa Application Form</h3>
+      <p>
+        Developed a Python application to fill Saudi visa application forms automatically.
+      </p>
+      <a href="https://github.com/chifaa-VscCnt/Saudi-Aisa-Application-Form" target="_blank">
+        GitHub →
+      </a>
     </div>
-
   </div>
 </section>
-
 <section>
   <h2>Education</h2>
-  <p><strong>State Engineer Degree in Computer Science (AI)</strong><br> Djilali Liabes University — 2022 to Present</p>
-  <p><strong>Scientific Baccalaureate 2022</strong><br> Specialty: Experimental Sciences</p>
+  <p>
+    <strong>State Engineer Degree in Computer Science (AI)</strong><br>
+    Djilali Liabes University — 2022 to Present
+  </p>
+</br>
+  <p>
+    <strong>Scientific Baccalaureate 2022</strong><br>
+    Specialty: Experimental Sciences
+  </p>
 </section>
-
 <section>
   <h2>Contact</h2>
   <div class="card" style="max-width: 500px">
-    <p><i class="fa-solid fa-envelope" style="color:#38bdf8; margin-right:10px;"></i> chifaachifaa847@gmail.com</p>
-    <p><i class="fa-solid fa-phone" style="color:#38bdf8; margin-right:10px;"></i> +213 793 513 841</p>
-    <p><i class="fa-solid fa-location-dot" style="color:#38bdf8; margin-right:10px;"></i> Algeria</p>
-    <p><i class="fa-brands fa-github" style="color:#38bdf8; margin-right:10px;"></i> <a href="https://github.com/chifaa-VscCnt" target="_blank">GitHub</a></p>
-    <p><i class="fa-brands fa-linkedin" style="color:#38bdf8; margin-right:10px;"></i> <a href="https://linkedin.com/in/chetti-chifaa" target="_blank">LinkedIn</a></p>
+    <p>
+      <i class="fa-solid fa-envelope" style="color:#38bdf8; margin-right:10px;"></i>
+      chifaachifaa847@gmail.com
+    </p>
+    <p>
+      <i class="fa-solid fa-phone" style="color:#38bdf8; margin-right:10px;"></i>
+      +213 793 513 841
+    </p>
+    <p>
+      <i class="fa-solid fa-location-dot" style="color:#38bdf8; margin-right:10px;"></i>
+      Algeria
+    </p>
+    <p>
+      <i class="fa-brands fa-github" style="color:#38bdf8; margin-right:10px;"></i>
+      <a href="https://github.com/chifaa-VscCnt" target="_blank">GitHub</a>
+    </p>
+    <p>
+      <i class="fa-brands fa-linkedin" style="color:#38bdf8; margin-right:10px;"></i>
+      <a href="https://linkedin.com/in/chetti-chifaa" target="_blank">LinkedIn</a>
+    </p>
   </div>
   <br>
   <a href="CV-Chifaa-Chetti.pdf" download
-     style="display:inline-block; padding:12px 25px; background:#38bdf8; color:#000; text-decoration:none; font-weight:bold; border-radius:25px;">Download My CV</a>
+     style="
+       display:inline-block;
+       padding:12px 25px;
+       background:#38bdf8;
+       color:#000;
+       text-decoration:none;
+       font-weight:bold;
+       border-radius:25px;
+     ">
+     Download My CV
+  </a>
 </section>
-
 <footer>
   © 2025 Chifaa Chetti — All Rights Reserved
 </footer>
-
 </body>
 </html>
