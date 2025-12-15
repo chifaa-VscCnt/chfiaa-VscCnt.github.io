@@ -83,6 +83,11 @@
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .card:hover {
       transform: translateY(-10px);
@@ -91,6 +96,12 @@
     .card h3 {
       margin-top: 0;
       color: var(--primary);
+      position: relative;
+      z-index: 1;
+    }
+    .card p, .card a {
+      position: relative;
+      z-index: 1;
     }
     .card a {
       color: var(--accent);
@@ -100,10 +111,42 @@
     .card a:hover {
       text-decoration: underline;
     }
+    /* Skill logos as faded backgrounds */
+    .skill-python { background: url('https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.png') center/contain no-repeat, var(--card-bg); opacity: 0.15; }
+    .skill-python::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: inherit; opacity: 0.15; }
+    .skill-ml { background: url('https://media.gettyimages.com/id/1264542084/vector/machine-learning-and-artificial-intelligence-gears-mechanism-abstract-background-concept.jpg') center/cover no-repeat; }
+    .skill-ml::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(30, 41, 59, 0.7); }
+    .skill-sql { background: url('https://e7.pngegg.com/pngimages/28/601/png-clipart-sql-logo-illustration-microsoft-azure-sql-database-microsoft-sql-server-database-blue-text.png') center/contain no-repeat, var(--card-bg); }
+    .skill-sql::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
+    .skill-mongo { background: url('https://www.nicepng.com/png/detail/868-8686277_mongo-db-badge-sticker-mongodb.png') center/contain no-repeat, var(--card-bg); }
+    .skill-mongo::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
+    .skill-git { background: url('https://www.scaler.com/topics/images/git-logo.webp') center/contain no-repeat, var(--card-bg); }
+    .skill-git::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.15; background: inherit; }
+    .skill-github { background: url('https://download.logo.wine/logo/GitHub/GitHub-Logo.wine.png') center/contain no-repeat, var(--card-bg); }
+    .skill-github::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
+    .skill-html { background: url('https://e7.pngegg.com/pngimages/187/112/png-clipart-responsive-web-design-html-computer-icons-css3-world-wide-web-consortium-css-angle-text.png') center/contain no-repeat, var(--card-bg); }
+    .skill-html::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
+    .skill-react { background: url('https://www.nicepng.com/png/detail/826-8263562_the-react-logo-react-js-logo-svg.png') center/contain no-repeat, var(--card-bg); }
+    .skill-react::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
+
+    /* Project background images */
+    .project-ml { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), url('https://thumbs.dreamstime.com/b/abstract-network-connection-glowing-orange-teal-nodes-linked-lines-digital-data-visualization-futuristic-technology-concept-383665049.jpg') center/cover no-repeat;
+    }
+    .project-invoice { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), url('https://qbotica.com/wp-content/uploads/2024/10/Downloader-La-244895.webp') center/cover no-repeat;
+    }
+    .project-ecommerce { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), url('https://media.istockphoto.com/id/1286825422/vector/futuristic-online-shopping-e-commerce-concept-with-glowing-smartphone-shopping-cart-credit.jpg?s=612x612&w=0&k=20&c=PSJSmwBuy8_fpXqkVcVmamNlDeFJhtSLzOx45O3HOso=') center/cover no-repeat;
+    }
+    .project-visa { 
+      background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), url('https://www.shutterstock.com/image-vector/visa-application-document-form-passport-600nw-2628059167.jpg') center/cover no-repeat;
+    }
+
     footer {
       text-align: center;
       padding: 40px;
-      background: #0a0e1a; /* Deeper dark for better separation */
+      background: #0a0e1a;
       font-size: 0.9rem;
       color: var(--text);
       border-top: 1px solid rgba(56, 189, 248, 0.2);
@@ -143,19 +186,19 @@
 <section>
   <h2>Skills</h2>
   <div class="skills">
-    <div class="card">Python</div>
-    <div class="card">Machine Learning</div>
-    <div class="card">SQL & mongoDB</div>
-    <div class="card">Git & GitHub</div>
-    <div class="card">HTML</div>
-    <div class="card">Basic React</div>
+    <div class="card skill-python">Python</div>
+    <div class="card skill-ml">Machine Learning</div>
+    <div class="card skill-sql">SQL & mongoDB</div>
+    <div class="card skill-git skill-github">Git & GitHub</div>
+    <div class="card skill-html">HTML</div>
+    <div class="card skill-react">Basic React</div>
   </div>
 </section>
 <section id="projects">
   <h2>Projects</h2>
   <div class="projects">
     <!-- Machine Learning Models -->
-    <div class="card">
+    <div class="card project-ml">
       <h3><i class="fa-solid fa-robot" style="color:#38bdf8; margin-right:8px;"></i>Machine Learning Models</h3>
       <p>
         Implemented ML paradigms (Supervised, Unsupervised, Reinforcement Learning),
@@ -166,7 +209,7 @@
       </a>
     </div>
     <!-- Invoice Automation Tool -->
-    <div class="card">
+    <div class="card project-invoice">
       <h3><i class="fa-solid fa-file-invoice" style="color:#38bdf8; margin-right:8px;"></i>Invoice Automation Tool</h3>
       <p>
         Automated multiple PDF invoices extraction, price updates, and Excel export in one workflow.
@@ -176,7 +219,7 @@
       </a>
     </div>
     <!-- E-commerce AI Description Generator -->
-    <div class="card">
+    <div class="card project-ecommerce">
       <h3><i class="fa-solid fa-cart-shopping" style="color:#38bdf8; margin-right:8px;"></i>E-commerce AI Description Generator</h3>
       <p>
         Built a Python tool to automatically generate product descriptions for e-commerce websites.
@@ -185,8 +228,8 @@
         GitHub →
       </a>
     </div>
-    <!-- Saudi-Aisa-Application-Form -->
-    <div class="card">
+    <!-- Saudi-Aisa Application Form -->
+    <div class="card project-visa">
       <h3><i class="fa-solid fa-passport" style="color:#38bdf8; margin-right:8px;"></i>Saudi-Aisa Application Form</h3>
       <p>
         Developed a Python application to fill Saudi visa application forms automatically.
