@@ -5,7 +5,7 @@
   <title>Chifaa Chetti | AI Engineering Student</title>
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
 
   <style>
     :root {
@@ -25,7 +25,6 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      scroll-behavior: smooth; /* Smooth scroll */
     }
 
     header {
@@ -54,12 +53,6 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 30px;
-      transition: all 0.3s ease;
-    }
-
-    header a:hover {
-      transform: translateY(-3px);
-      background: #0ea5e9;
     }
 
     section {
@@ -84,12 +77,11 @@
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
 
     .card h3 {
@@ -101,27 +93,6 @@
       color: var(--accent);
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    .card a:hover {
-      color: #0ea5e9;
-    }
-
-    section a.download-btn {
-      display:inline-block;
-      padding:12px 25px;
-      background:#38bdf8;
-      color:#000;
-      text-decoration:none;
-      font-weight:bold;
-      border-radius:25px;
-      transition: all 0.3s ease;
-    }
-
-    section a.download-btn:hover {
-      transform: translateY(-3px);
-      background:#0ea5e9;
     }
 
     footer {
@@ -159,7 +130,7 @@
   <a href="#projects">View My Projects</a>
 </header>
 
-<section data-aos="fade-up">
+<section>
   <h2>About Me</h2>
   <p>
     I am a 4th-year Computer Science Engineering student specializing in Artificial Intelligence.
@@ -168,23 +139,24 @@
   </p>
 </section>
 
-<section data-aos="fade-up">
+<section>
   <h2>Skills</h2>
   <div class="skills">
-    <div class="card" data-aos="fade-up">Python</div>
-    <div class="card" data-aos="fade-up">Machine Learning</div>
-    <div class="card" data-aos="fade-up">SQL</div>
-    <div class="card" data-aos="fade-up">Git & GitHub</div>
-    <div class="card" data-aos="fade-up">HTML</div>
-    <div class="card" data-aos="fade-up">Basic React</div>
+    <div class="card">Python</div>
+    <div class="card">Machine Learning</div>
+    <div class="card">SQL</div>
+    <div class="card">Git & GitHub</div>
+    <div class="card">HTML</div>
+    <div class="card">Basic React</div>
   </div>
 </section>
 
-<section id="projects" data-aos="fade-up">
+<section id="projects">
   <h2>Projects</h2>
   <div class="projects">
 
-    <div class="card" data-aos="fade-up">
+    <!-- Machine Learning Models -->
+    <div class="card">
       <h3><i class="fa-solid fa-robot" style="color:#38bdf8; margin-right:8px;"></i>Machine Learning Models</h3>
       <p>
         Implemented ML paradigms (Supervised, Unsupervised, Reinforcement Learning),
@@ -195,7 +167,8 @@
       </a>
     </div>
 
-    <div class="card" data-aos="fade-up">
+    <!-- Invoice Automation Tool -->
+    <div class="card">
       <h3><i class="fa-solid fa-file-invoice" style="color:#38bdf8; margin-right:8px;"></i>Invoice Automation Tool</h3>
       <p>
         Automated multiple PDF invoices extraction, price updates, and Excel export in one workflow.
@@ -205,7 +178,8 @@
       </a>
     </div>
 
-    <div class="card" data-aos="fade-up">
+    <!-- E-commerce AI Description Generator -->
+    <div class="card">
       <h3><i class="fa-solid fa-cart-shopping" style="color:#38bdf8; margin-right:8px;"></i>E-commerce AI Description Generator</h3>
       <p>
         Built a Python tool to automatically generate product descriptions for e-commerce websites.
@@ -215,7 +189,8 @@
       </a>
     </div>
 
-    <div class="card" data-aos="fade-up">
+    <!-- Saudi-Aisa-Application-Form -->
+    <div class="card">
       <h3><i class="fa-solid fa-passport" style="color:#38bdf8; margin-right:8px;"></i>Saudi-Aisa Application Form</h3>
       <p>
         Developed a Python application to fill Saudi visa application forms automatically.
@@ -228,7 +203,8 @@
   </div>
 </section>
 
-<section data-aos="fade-up">
+
+<section>
   <h2>Education</h2>
   <p>
     <strong>State Engineer Degree in Computer Science (AI)</strong><br>
@@ -241,10 +217,10 @@
   </p>
 </section>
 
-<section data-aos="fade-up">
+<section>
   <h2>Contact</h2>
 
-  <div class="card" style="max-width: 500px" data-aos="fade-up">
+  <div class="card" style="max-width: 500px">
 
     <p>
       <i class="fa-solid fa-envelope" style="color:#38bdf8; margin-right:10px;"></i>
@@ -275,19 +251,24 @@
 
   <br>
 
-  <a href="CV-Chifaa-Chetti.pdf" download class="download-btn">
+  <a href="CV-Chifaa-Chetti.pdf" download
+     style="
+       display:inline-block;
+       padding:12px 25px;
+       background:#38bdf8;
+       color:#000;
+       text-decoration:none;
+       font-weight:bold;
+       border-radius:25px;
+     ">
      Download My CV
   </a>
 </section>
 
+
 <footer>
   © 2025 Chifaa Chetti — All Rights Reserved
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({duration: 800, once: true});
-</script>
 
 </body>
 </html>
