@@ -112,23 +112,15 @@
       text-decoration: underline;
     }
     /* Skill logos as faded backgrounds */
-    .skill-python { background: url('https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.png') center/contain no-repeat, var(--card-bg); opacity: 0.15; }
-    .skill-python::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: inherit; opacity: 0.15; }
-    .skill-ml { background: url('https://media.gettyimages.com/id/1264542084/vector/machine-learning-and-artificial-intelligence-gears-mechanism-abstract-background-concept.jpg') center/cover no-repeat; }
-    .skill-ml::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(30, 41, 59, 0.7); }
-    .skill-sql { background: url('https://e7.pngegg.com/pngimages/28/601/png-clipart-sql-logo-illustration-microsoft-azure-sql-database-microsoft-sql-server-database-blue-text.png') center/contain no-repeat, var(--card-bg); }
-    .skill-sql::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
-    .skill-mongo { background: url('https://www.nicepng.com/png/detail/868-8686277_mongo-db-badge-sticker-mongodb.png') center/contain no-repeat, var(--card-bg); }
-    .skill-mongo::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
-    .skill-git { background: url('https://www.scaler.com/topics/images/git-logo.webp') center/contain no-repeat, var(--card-bg); }
-    .skill-git::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.15; background: inherit; }
-    .skill-github { background: url('https://download.logo.wine/logo/GitHub/GitHub-Logo.wine.png') center/contain no-repeat, var(--card-bg); }
-    .skill-github::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
-    .skill-html { background: url('https://e7.pngegg.com/pngimages/187/112/png-clipart-responsive-web-design-html-computer-icons-css3-world-wide-web-consortium-css-angle-text.png') center/contain no-repeat, var(--card-bg); }
-    .skill-html::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
-    .skill-react { background: url('https://www.nicepng.com/png/detail/826-8263562_the-react-logo-react-js-logo-svg.png') center/contain no-repeat, var(--card-bg); }
-    .skill-react::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.2; background: inherit; }
-
+    <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg');">Python</div>
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg');">Machine Learning</div>
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg');">SQL & mongoDB</div>
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg');">Git & GitHub</div>
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');">HTML</div>
+    <div class="skill-card" style="background-image:url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');">Basic React</div>
+  </div>
     /* Project background images */
     .project-ml { 
       background: linear-gradient(rgba(30,41,59,0.7), rgba(30,41,59,0.7)), url('https://thumbs.dreamstime.com/b/abstract-network-connection-glowing-orange-teal-nodes-linked-lines-digital-data-visualization-futuristic-technology-concept-383665049.jpg') center/cover no-repeat;
